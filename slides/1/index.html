@@ -7,7 +7,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,12 +24,124 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+				  <section>
+              <h1>Tech Talk</h1>
+              <h2>Functional Programming</h2>
+              <h3>Primer</h3>
+          </section>
+          <section>
+              <h2>Space and Time</h2>
+              <span class="fragment">
+                  <table class="fragment">
+                      <tr>
+                          <td>Time/State</td>
+                          <td>a</td>
+                          <td>b</td>
+                          <td>c</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>1</td>
+                          <td></td>
+                          <td></td>
+                          <td>// a = 1;</td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>1</td>
+                          <td>2</td>
+                          <td></td>
+                          <td>// b = 2;</td>
+                      </tr>
+                      <tr>
+                          <td>3</td>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>2</td>
+                          <td>// c = b;</td>
+                      </tr>
+                      <tr>
+                          <td>4</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>// b = a;</td>
+                      </tr>
+                      <tr>
+                          <td>5</td>
+                          <td>2</td>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>// a = c;</td>
+                      </tr>
+                  </table>
+              </span>
+              <span class="fragment grow highlight-red"><emphasis class="fragment" > We need a debugger!!</emphasis> </span>
+          </section>
+          <section>
+              <section>
+                  <h2>Programmer Discipline</h2>
+                  <span class="fragment fade-up"><img alt="" src="./images/ninja.jpg"/></span>
+              </section>
+              <section>
+                  <h2>...Or Programming without statements and assignments</h2>
+                  <h3>(Using expressions)</h3>
+                  <code>swap(a, b) = (b, a)</code>
+              </section>
+          </section>
+          <section>
+              <section>
+                  <h2>Functional Languages</h2>
+                  <h3>..and pure functions</h3>
+                  <p class="fragment"> <code>times x y = x * y</code> </p>
+                  <p class="fragment"> <code>times :: Num a => a -> a -> a</code> </p>
+              </section>
+              <section>
+                  <h3>Partial application / Currying</h3>
+                  <p class="fragment"> <code>times x y = x * y</code> </p>
+                  <p class="fragment"> <code class="fragment highlight-blue">times :: Num a => a -> a -> a</code> </p>
+                  <p class="fragment"> <code>twotimes = times 2</code> </p>
+                  <p class="fragment"> <code class="fragment highlight-blue">Num a => a -> ( a -> a )</code> </p>
+              </section>
+              <section>
+                  <h3>Composition</h3>
+                  <p class="fragment"> <code>times x y = x * y</code> </p>
+                  <p class="fragment"> <code>twotimes = times 2</code> </p>
+                  <p class="fragment"> <code>threetimes = times 3</code> </p>
+                  <p class="fragment"> <code>sixtimes = twotimes . threetimes</code> </p>
+                  <p class="fragment"> <code>twelvetimes = sixtimes . twotimes</code> </p>
+                  <h4 class="fragment">Building more complex parts from lesser complex parts</h4>
+              </section>
+          </section>
+          <section>
+              <h2>Idiomatic functional vs Idiomatic imperative code</h2>
+              <h3>Demo !!</h3>
+          </section>
+          <section>
+              <section>
+                <h2>Compiler support for pure functions</h2>
+                <img alt="" src="./images/callstack.png"/>
+              </section>
+              <section>
+                  <h3>Pure functions</h3>
+                  <p> can be...
+                  </p>
+                  <ul>
+                      <li>Memoized</li>
+                      <li>Evaluated lazily</li>
+                      <li>Evaluated in advance</li>
+                      <li>Evaluated concurrently</li>
+                      <li>Eliminated in subexpressions</li>
+                      <li>Optimized better by compiler</li>
+                      <li>Developed incrementally</li>
+                  </ul>
+              </section>
+          </section>
+      </div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 
 		<script>
