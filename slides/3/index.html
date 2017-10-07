@@ -31,44 +31,27 @@
           </section>
           <section>
               <h2>Pattern matching</h2>
-              <img alt="" src="./images/pattern-matching.jpg"/>
+              <p align="left"> <span class="fragment"><code>xor :: Bool -> Bool</code> </span></p>
+              <p align="left"> <span class="fragment"><code>xor True False = True</code> </span></p>
+              <p align="left"> <span class="fragment"><code>xor False True = True</code> </span></p>
+              <p align="left"> <span class="fragment"><code>xor _ _ = False</code> </span></p>
           </section>
           <section>
-              <h2>Lists</h2>
-              <ul>
-                  <span class="fragment"><li>Constucting lists (method#1 - using dots)</li></span>
-                  <span class="fragment"><li>Infinite lists</li></span>
-                  <span class="fragment">
-                      <li>
-                          Some useful list functions
-                          <ul>
-                              <li><code>cycle</code>, <code>repeat</code></li>
-                              <li><code>head</code>, <code>tail</code></li>
-                              <li><code>take</code>, <code>drop</code></li>
-                              <li><code>reverse</code>, <code>null</code></li>
-                          </ul>
-                      </li>
-                  </span>
-                  <span class="fragment">
-                      <li>
-                          List comprehension
-                          <ul>
-                          <span class="fragment"> <li>filter</li> </span>
-                          </ul>
-                      </li>
-                  </span>
-              </ul>
+              <h2>Guards</h2>
+              <p align="left"> <span class="fragment"><code>xor :: Bool -> Bool</code> </span></p>
+              <p align="left"> <span class="fragment"><code>xor a b | a /= b = True</code> </span></p>
+              <p align="left"> <span class="fragment"><code>&nbsp &nbsp &nbsp &nbsp | otherwise = False</code> </span></p>
           </section>
           <section>
-              <h3>Some other useful functions</h3>
-              <ul>
-                  <span class="fragment"> <li><code>map</code></li></span>
-                  <span class="fragment"> <li><code>zipWith</code></li></span>
-                  <span class="fragment"> <li><code>zip</code></li></span>
-              </ul>
+              <h2>Let expression</h2>
+              <p align="left"> <span class="fragment"><code>let light = "electromagnetic wave" </code></span> </p>
+              <p align="left"> <span class="fragment"><code>in (light ++ " is made up of particles")</code></span> </p>
           </section>
           <section>
-              <h3>Practice !!</h3>
+              <h2>Case expression</h2>
+              <p align="left"> <span class="fragment"><code>case light of</code></span> </p>
+              <p align="left"> <span class="fragment"><code>"wave" -> "light is a wave"</code></span> </p>
+              <p align="left"> <span class="fragment"><code>"particle" -> "light is just particles"</code></span> </p>
           </section>
       </div>
     </div>
