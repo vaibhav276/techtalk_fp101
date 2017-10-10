@@ -31,14 +31,14 @@
           </section>
           <section>
               <h2>Pattern matching</h2>
-              <p align="left"> <span class="fragment"><code>xor :: Bool -> Bool</code> </span></p>
+              <p align="left"> <span class="fragment"><code>xor :: Bool -> Bool -> Bool</code> </span></p>
               <p align="left"> <span class="fragment"><code>xor True False = True</code> </span></p>
               <p align="left"> <span class="fragment"><code>xor False True = True</code> </span></p>
               <p align="left"> <span class="fragment"><code>xor _ _ = False</code> </span></p>
           </section>
           <section>
               <h2>Guards</h2>
-              <p align="left"> <span class="fragment"><code>xor :: Bool -> Bool</code> </span></p>
+              <p align="left"> <span class="fragment"><code>xor :: Bool -> Bool -> Bool</code> </span></p>
               <p align="left"> <span class="fragment"><code>xor a b | a /= b = True</code> </span></p>
               <p align="left"> <span class="fragment"><code>&nbsp &nbsp &nbsp &nbsp | otherwise = False</code> </span></p>
           </section>

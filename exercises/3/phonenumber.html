@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    </head>
+    <body class="container">
+        <h2 id="phone-number-pretty-printing">Phone number pretty printing</h2>
+        <p>Given a phone number in string format, pretty print it as follows:</p>
+        <ul>
+            <li>If the phone number begins with a &quot;+&quot; symbol, ignore the first character and consider the remaining string</li>
+            <li>If the phone number is not 10 characters long (11 incase it started with a &quot;+&quot;), then pretty print as &quot;invalid&quot;</li>
+            <li>pretty print should print number as (country code) [area code] &lt;actual number&gt;<ul>
+                <li>country code is the first 2 characters of the number</li>
+                <li>area code is the next 3 characters</li>
+                <li>actual number is remaining 5 characters</li>
+            </ul>
+            </li>
+        </ul>
+        <h3 id="examples-">Examples:</h3>
+        <p>+9120467856 should be printed as &quot;(91) [204] &lt;67856&gt;&quot;<br>9120467856 should be printed as &quot;(91) [204] &lt;67856&gt;&quot;<br>97473 should be printed as &quot;invalid&quot;<br>9237483797473 should be printed as &quot;invalid&quot;</p>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
