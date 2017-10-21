@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>FP101 - Types and Type classes</title>
+
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				  <section>
+              <h1>Tech Talk</h1>
+              <h2>Functional Programming</h2>
+              <h3>Types and Type classes</h3>
+          </section>
+          <section>
+              <section>
+                  <h2>Types are just sets</h2>
+              </section>
+              <section>
+                  <h2>The empty set</h2>
+                  <p> <span class="fragment">Void</span> </p>
+                  <p> <span class="fragment"><code>absurd :: Void -> a</code></span> </p>
+                  <p> <span class="fragment">(import Data.Void)</span></p>
+              </section>
+              <section>
+                  <h2>The singleton set</h2>
+                  <p> <span class="fragment">Unit</span> </p>
+                  <p> <span class="fragment"><code>unit :: a -> ()</code></span> </p>
+              </section>
+              <section>
+                  <h2>More types...</h2>
+                  <ul>
+                      <li>Bool</li>
+                      <li>Int</li>
+                      <li>Integer</li>
+                      <li>Many more... </li>
+                      <li>User defined types</li>
+                  </ul>
+              </section>
+          </section>
+          <section>
+              <section>
+                  <h2>Typeclasses</h2>
+                  <h3>Defining characteristics of types</h3>
+              </section>
+              <section>
+                  <h2>Eq</h2>
+                  <p> <span class="fragment"><code>(==) :: (Eq a) => a -> a -> Bool</code></span> </p>
+              </section>
+              <section>
+                  <h2>Ord</h2>
+                  <p> <span class="fragment"><code>(>) :: (Ord a) => a -> a -> Bool</code></span> </p>
+              </section>
+              <section>
+                  <h2>More typeclasses...</h2>
+                  <ul>
+                      <li>Enum</li>
+                      <ul>
+                          <li>succ</li>
+                          <li>pred</li>
+                      </ul>
+                      <li>Bounded</li>
+                      <ul>
+                          <li>minBound</li>
+                          <li>maxBound</li>
+                      </ul>
+                      <li>Many more... </li>
+                      <li>User defined typeclasses</li>
+                  </ul>
+              </section>
+          </section>
+          <section>
+              <h2>Parametric polymorphism</h2>
+              <p algn="left"> <span class="fragment"><code>ceiling::(Integral b,RealFrac a) => a->b</code></span> </p>
+              <p> <span class="fragment"><a href="http://www.stroustrup.com/bs_faq2.html#constraints">C++ template type constraints</a></span> </p>
+          </section>
+      </div>
+    </div>
+
+    <script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: '../plugin/markdown/marked.js' },
+					{ src: '../plugin/markdown/markdown.js' },
+					{ src: '../plugin/notes/notes.js', async: true },
+					{ src: '../plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
